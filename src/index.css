@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 20% 15%;
+
+    /* Ocean blue primary for travel industry trust */
+    --primary: 215 85% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 215 85% 20%;
+
+    /* Light blue secondary */
+    --secondary: 200 50% 96%;
+    --secondary-foreground: 215 85% 25%;
+
+    --muted: 210 40% 97%;
+    --muted-foreground: 215 16% 45%;
+
+    /* Teal accent */
+    --accent: 180 65% 85%;
+    --accent-foreground: 215 85% 25%;
+
+    /* Orange CTA for booking actions */
+    --cta: 25 95% 55%;
+    --cta-foreground: 0 0% 100%;
+    --cta-hover: 25 95% 50%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 40% 90%;
+    --input: 210 40% 96%;
+    --ring: 215 85% 25%;
+
+    /* Travel-specific design tokens */
+    --gradient-hero: linear-gradient(135deg, hsl(215 85% 25%), hsl(200 80% 35%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    --shadow-card: 0 4px 6px -1px hsl(215 25% 25% / 0.1), 0 2px 4px -1px hsl(215 25% 25% / 0.06);
+    --shadow-hover: 0 10px 25px -3px hsl(215 25% 25% / 0.1), 0 4px 6px -2px hsl(215 25% 25% / 0.05);
+    --shadow-modal: 0 25px 50px -12px hsl(215 25% 25% / 0.25);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 30% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 200 80% 60%;
+    --primary-foreground: 215 30% 8%;
+    --primary-hover: 200 80% 55%;
+
+    --secondary: 215 25% 16%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 215 25% 16%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 180 50% 20%;
+    --accent-foreground: 210 40% 98%;
+
+    --cta: 25 95% 55%;
+    --cta-foreground: 0 0% 100%;
+    --cta-hover: 25 95% 60%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 20%;
+    --input: 215 25% 16%;
+    --ring: 200 80% 60%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(200 80% 60%), hsl(180 70% 45%));
+    --gradient-card: linear-gradient(145deg, hsl(215 25% 12%), hsl(215 25% 14%));
+    --shadow-card: 0 4px 6px -1px hsl(0 0% 0% / 0.2), 0 2px 4px -1px hsl(0 0% 0% / 0.1);
+    --shadow-hover: 0 10px 25px -3px hsl(0 0% 0% / 0.2), 0 4px 6px -2px hsl(0 0% 0% / 0.1);
+    --shadow-modal: 0 25px 50px -12px hsl(0 0% 0% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
